@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class drinkingage {
+
+	private static Scanner input;
+			public static void main(String[] args) {
+				// TODO Auto-generated method stub
+				input= new Scanner(System.in);
+				int guess;
+				int guess1=1, guess2=2;
+				int dice;
+				int min=1,max=6;
+				int odd=1,odd2=3, odd3=5;
+				int even=2,even2=4,even3=6;
+				dice= min+(int)(Math.random()*max);	
+		
+				do{
+				System.out.println("Guess what the roll was 1 for odd, 2 for even");
+				guess=input.nextInt();
+				
+		if(guess==guess1){
+			if((dice==odd)||(dice==odd2)||(dice==odd3)){
+			System.out.println("Your guess is right");}
+			else{System.out.println("You guessed wrong");}
+		}
+		if(guess==guess2){
+			if((dice==even)||(dice==even2)||(dice==even3)){
+				System.out.println("Your guess is right");}
+			else{System.out.println("You guessed wrong");}
+			}
+				}while ((guess==guess1)||(guess==guess2));
+				}	
+}
